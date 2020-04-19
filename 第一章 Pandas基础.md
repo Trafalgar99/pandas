@@ -29,7 +29,7 @@ print(df.head())  # head()返回数据的前五行(类似于Linux中的head命�
 
 输出结果：
 
- ![image-20200419111640933](C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419111640933.png)
+ ![image-20200419111640933](.\images\image-20200419111640933.png)
 
 
 
@@ -40,7 +40,7 @@ df_txt = pd.read_table('data/table.txt')  # 可设置sep分隔符参数
 print(df_txt)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419112045497.png" alt="image-20200419112045497" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419112045497.png" alt="image-20200419112045497" style="zoom:67%;" />
 
 
 
@@ -54,7 +54,7 @@ print(df_excel.head())
 
 输出结果：
 
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419112243496.png" alt="image-20200419112243496" style="zoom: 67%;" />
+<img src=".\images\image-20200419112243496.png" alt="image-20200419112243496" style="zoom: 67%;" />
 
 
 
@@ -110,7 +110,7 @@ s = pd.Series(np.random.randn(5),index=['a','b','c','d','e'],name='这是一个S
 print(s)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419122342372.png" alt="image-20200419122342372" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419122342372.png" alt="image-20200419122342372" style="zoom:67%;" />
 
 *（b）访问Series属性*
 
@@ -121,7 +121,7 @@ print(s.index)
 print(s.dtype)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419123154263.png" alt="image-20200419123154263" style="zoom:80%;" />
+输出结果：<img src=".\images\image-20200419123154263.png" alt="image-20200419123154263" style="zoom:80%;" />
 
 *（c）取出某一个元素*
 
@@ -159,7 +159,7 @@ df = pd.DataFrame({'col1':list('abcde'),'col2':range(5,10),'col3'
 print(df)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419124404028.png" alt="image-20200419124404028" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419124404028.png" alt="image-20200419124404028" style="zoom:67%;" />
 
 *（b）从DataFrame取出一列为Series*
 
@@ -168,7 +168,7 @@ print(df['col1'])
 print(type(df))
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419124912600.png" alt="image-20200419124912600" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419124912600.png" alt="image-20200419124912600" style="zoom:67%;" />
 
 *（c）修改行或列名*
 
@@ -177,7 +177,7 @@ df = df.rename(index={'一':'one'},columns={'col1':'new_col1'})
 print(df)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419125123612.png" alt="image-20200419125123612" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419125123612.png" alt="image-20200419125123612" style="zoom:67%;" />
 
 
 
@@ -193,7 +193,7 @@ print(df.mean())  # 求每列的平均值，仅针对数字
 
 输出结果：
 
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419125411259.png" alt="image-20200419125411259" style="zoom: 50%;" />
+<img src=".\images\image-20200419125411259.png" alt="image-20200419125411259" style="zoom: 50%;" />
 
 *（e）索引对齐特性*
 
@@ -205,7 +205,7 @@ df2 = pd.DataFrame({'A':[1,2,3]},index=[3,1,2])
 df1-df2 #由于索引对齐，因此结果不是0
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419130001471.png" alt="image-20200419130001471" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419130001471.png" alt="image-20200419130001471" style="zoom:67%;" />
 
 *（f）列的删除与添加*
 
@@ -218,7 +218,7 @@ df.drop(index='五',columns='col1') # 删除第五行和第一列
 print(df)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419130900925.png" alt="image-20200419130900925" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419130900925.png" alt="image-20200419130900925" style="zoom:67%;" />
 
 ```python
 df['col1']=[1,2,3,4,5]
@@ -226,14 +226,14 @@ del df['col1']  # 删除引用
 print(df)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419131046194.png" alt="image-20200419131046194" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419131046194.png" alt="image-20200419131046194" style="zoom:67%;" />
 
 ```python
 df['col1']=[1,2,3,4,5]
 print(df.pop('col1'))  # 这里的pop机制类似于普遍的pop函数
 ```
 
-结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419131250968.png" alt="image-20200419131250968" style="zoom:67%;" />
+结果：<img src=".\images\image-20200419131250968.png" alt="image-20200419131250968" style="zoom:67%;" />
 
 > 可以直接增加新的列，也可以使用assign方法
 
@@ -242,7 +242,7 @@ df1['B']=list('abc')
 df1.assign(C=pd.Series(list('def')))  # assign不会修改原对象，会返回修改后的对象
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419131457194.png" alt="image-20200419131457194" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419131457194.png" alt="image-20200419131457194" style="zoom:67%;" />
 
 *（g）根据类型选择列*
 
@@ -251,7 +251,7 @@ print(df.select_dtypes(include=['number']).head())
 print(df.select_dtypes(include=['float']).head())
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419132155599.png" alt="image-20200419132155599" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419132155599.png" alt="image-20200419132155599" style="zoom:67%;" />
 
 *（h）将Series转换为DataFrame*
 
@@ -261,13 +261,13 @@ s.name='to_DataFrame'
 print(s)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419132336522.png" alt="image-20200419132336522" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419132336522.png" alt="image-20200419132336522" style="zoom:67%;" />
 
 ```python
 print(s.to_frame())
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419132518729.png" alt="image-20200419132518729" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419132518729.png" alt="image-20200419132518729" style="zoom:67%;" />
 
 > 使用T符号可以转置
 
@@ -275,7 +275,7 @@ print(s.to_frame())
 print(s.to_frame().T)
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419132652170.png" alt="image-20200419132652170" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419132652170.png" alt="image-20200419132652170" style="zoom:67%;" />
 
 
 
@@ -299,7 +299,7 @@ print(df.head(3))  # 可以指示显示多少行
 
 输出结果：
 
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419133256079.png" alt="image-20200419133256079" style="zoom:50%;" />
+<img src=".\images\image-20200419133256079.png" alt="image-20200419133256079" style="zoom:50%;" />
 
 #### 2、unique和nunique
 
@@ -317,7 +317,7 @@ print(df['Physics'].nunique())
 print(df['Physics'].unique())
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419133526620.png" alt="image-20200419133526620" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419133526620.png" alt="image-20200419133526620" style="zoom:67%;" />
 
 #### 3、count和value_counts
 
@@ -335,7 +335,7 @@ print(df['Physics'].count())
 print(df['Physics'].value_counts())
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419133821687.png" alt="image-20200419133821687" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419133821687.png" alt="image-20200419133821687" style="zoom:67%;" />
 
 #### 4、 describe和info
 
@@ -345,7 +345,7 @@ print(df['Physics'].value_counts())
 print(df.info())
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419134001777.png" alt="image-20200419134001777" style="zoom: 50%;" />
+输出结果：<img src=".\images\image-20200419134001777.png" alt="image-20200419134001777" style="zoom: 50%;" />
 
 > describe默认统计数值型数据的各个统计量
 
@@ -353,7 +353,7 @@ print(df.info())
 print(df.describe()) # 可通过percentiles=[.05, .25, .75, .95]控制位数
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419134200554.png" alt="image-20200419134200554" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419134200554.png" alt="image-20200419134200554" style="zoom:67%;" />
 
 #### 7、 apply函数
 
@@ -387,7 +387,7 @@ print('(按单词统计)说话最多：', c.most_common()[0][0], "说了：", c.
 
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419163412583.png" alt="image-20200419163412583" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419163412583.png" alt="image-20200419163412583" style="zoom:67%;" />
 
 
 
@@ -406,5 +406,5 @@ print(pd.Series(list(list(zip(*(pd.Series(list(zip(s2['game_id'], s2['opponent']
                                 .unique()).tolist()))[1])).value_counts().index[0])
 ```
 
-输出结果：<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20200419170000446.png" alt="image-20200419170000446" style="zoom:67%;" />
+输出结果：<img src=".\images\image-20200419170000446.png" alt="image-20200419170000446" style="zoom:67%;" />
 
